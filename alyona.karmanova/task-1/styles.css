@@ -5,3 +5,7 @@
 .product-name, .category-name {
     font-weight: bold;
 }
+
+.products {
+  list-style: disc;
+}
