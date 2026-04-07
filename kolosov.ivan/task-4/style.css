@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-block {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.user {
+    background-color: red;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
