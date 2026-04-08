@@ -20,7 +20,6 @@ function loadData(){
 export let restoredEvents = loadData()
 
 export function parseDateToString(date) {
-    console.log(typeof date);
     const year = date.getFullYear();
     const month = monthNames[date.getMonth()];
     const day = String(date.getDate()).padStart(2,"0");
@@ -74,10 +73,7 @@ function getParticipantList(events) {
 
 function getEventsByMonths(events,month){
     return events.filter((event) =>{
-        console.log(event.date);
-
         const eventDate = new Date(event.date);
-        console.log(eventDate);
         return  month === monthNames[eventDate.getMonth()]
     })
 }
