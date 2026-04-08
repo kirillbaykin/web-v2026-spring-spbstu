@@ -5,7 +5,6 @@ import {participantValidation} from "./participantsValidation.js";
 function addParticipant() {
     const form = document.getElementById('addParticipantForm');
     const formData = new FormData(form);
-
     const firstName = formData.get("participantFirstName");
     const secondName = formData.get("participantSecondName");
     const newParticipant = firstName + " " + secondName;
@@ -23,7 +22,6 @@ function addParticipant() {
                 return setList(res);
             }
         })
-        .then(res => console.log(res))
         .catch(error => console.log(error));
 }
 
@@ -34,12 +32,11 @@ function deleteParticipant(button){
     getList()
         .then(res => {
             const curCard = res.find(curEvent => curEvent.id === +eventId);
-            curCard.participants.splice(elementForDelete,1);
+            curCard.removeParticipant(elementForDelete);
 
             renderEventsCard(res);
             return setList(res);
         })
-        .then(res => console.log(res))
         .catch(error => console.log(error));
 }
 

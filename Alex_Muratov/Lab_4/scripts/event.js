@@ -48,8 +48,7 @@ export class Event {
         this.participants.push(name);
     }
 
-    removeParticipant(name){
-        const nameIndex = this.participants.indexOf(name)
+    removeParticipant(nameIndex){
         this.participants.splice(nameIndex,1);
     }
 

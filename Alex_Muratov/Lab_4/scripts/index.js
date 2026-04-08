@@ -43,7 +43,6 @@ function showModal(button) {
     const modal = document.getElementById("participant-modal");
     const cardId = +(button.closest(".event-card").id);
     modal.style.display = "block";
-    console.log(cardId);
     window.currentCardId = cardId;
 }
 
@@ -58,7 +57,6 @@ function closeModal (button){
 }
 
 export function renderEventsCard(events){
-    console.log("render");
     const container = document.querySelector(".events-container");
 
     const addCardHtml = `

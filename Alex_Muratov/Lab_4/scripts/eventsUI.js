@@ -25,7 +25,8 @@ function addEvent(){
 
             }
         })
-        .then(res => console.log(res));
+        .catch(error => console.log(error));
+
 }
 
 function deleteEvent(button){
@@ -37,7 +38,6 @@ function deleteEvent(button){
             renderEventsCard(newList);
             return setList(newList);
         })
-        .then(res => console.log(res))
         .catch(error => console.log(error));
 }
 
