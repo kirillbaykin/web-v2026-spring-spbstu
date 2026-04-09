@@ -1,6 +1,4 @@
 class User {
-    static #usersCount = 0;
-
     constructor(id, name) {
         if (typeof name != "string") {
             throw new Error("Name must be a string");
@@ -15,12 +13,7 @@ class User {
         this.id = id;
         this.name = name;
         this.friends = [];
-        User.#usersCount++;
     }
-
-    destroy() {
-        User.#usersCount--;
-    } 
 
     addFriend(friendID) {
         if (typeof friendID != "number" || Number.isNaN(friendID)) {
@@ -47,10 +40,6 @@ class User {
 
     get friendsCount() {
         return this.friends.length;
-    }
-
-    static get usersCount() {
-        return User.#usersCount;
     }
 }
 
